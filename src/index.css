@@ -1,0 +1,60 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top-pane{
+  background-color: rgb(87, 86, 86);
+}
+
+.pane{
+  height: 50vh;
+  display: flex;
+}
+
+.expand-collapsed{
+  background-color: transparent;
+  color: white;
+  padding: 4px;
+  outline: none;
+  border: none;
+}
+
+.editor-container{
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: .5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(69, 69, 69);
+}
+
+.editor-title{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(43, 43, 43);
+  color: white;
+  padding: .5rem .5rem .5rem 1rem;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+.CodeMirror{
+  height: 100% !important;
+}
+
+.editor-container.collapsed{
+  flex-grow: 0;
+}
+
+.editor-container.collapsed .CodeMirror-scroll{
+  position: absolute;
+}
+
+.code-editor-wrapper{
+  flex-grow: 1;
+  overflow: hidden;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
